@@ -1,0 +1,33 @@
+sequelize:是一款基于node.js的异步ORM框架，用于操作数据库
+ORM：对象关系映射，用于操作数据库，通过定义模型与数据库进行关联
+sequelize可以简化开发时在不同的电脑创建数据表结构的繁琐工作
+
+安装
+npm install --save sequelize
+安装数据库驱动模块
+npm install --save mysql2
+
+数据库连接池
+    数据库连接池主要负责分配，管理和释放数据库的连接，它允许应用程序重复使用一个现有的数据库连接，而不需要重建一个数据库连接
+
+    最小连接池：连接池会根据最小连接数一直保持数据库连接，所以如果应用程序对数据库的连接使用量不大的情况下，将会有大量的数据库丽娜姐资源被浪费
+
+    最大连接数： 连接池能申请的最大连接数，如果数据库连接请求次数超过最大连接数，后面的数据库连接将会被加入等待队列中
+
+node.js获取前端传过来的参数
+    post:在req.body获取请求体参数
+        对于post请求需要安装body-parser处理post请求体
+        npm i body-parser -S
+    get:在req.query获取请求体参数
+
+发送邮件 nodemailer
+安装npm i nodemailer -S
+
+token：验证
+前后端分离项目一般使用token验证
+前端使用一个正确的账号和密码向后台服务器换取一个合法token值，后台将生成的token值返回给前端，前端则使用cookie将其存储，以便访问需要验证登录时使用
+安装  jsonwebtoken  生成token
+ npm i jsonwebtoken -S
+
+ 安装  vue-cookies 前端保存token
+ npm install vue-cookies --save
